@@ -27,21 +27,26 @@ public void draw()
  dots();
  
 }
-public void star()
-{fill(random(255),random(255), 0, 30);
-ellipse(250,250, 5, mouseX/2 + mouseY/2);
-ellipse(250,250, mouseX/2 + mouseY/2,5 );
 
-}
+// central  circle that changes size
  public void poop()
- { fill(random(255),random(255), random(255), 60);
+ { fill((int) (Math.random() * 256),(int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 100));
   stroke(0, 0, 0, 50);
 ellipse(250, 250, mouseX,mouseY);}
-
+ 
+// dots that follow mouse
 public void dots()
-{ fill(random(255),random(255), random(255), 40);
+{ fill((int) (Math.random() * 256),(int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 100));
   noStroke();
 ellipse(mouseX,mouseY, 50, 50);
+}
+
+//Center star
+public void star()
+{fill((int) (Math.random() * 256),(int) (Math.random() * 256), (int) (Math.random() * 100));
+
+ellipse(250,250, 5, mouseX/2 + mouseY/2);
+ellipse(250,250, mouseX/2 + mouseY/2,5 );
 }
 
   static public void main(String[] passedArgs) {
